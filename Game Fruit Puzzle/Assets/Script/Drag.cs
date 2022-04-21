@@ -6,17 +6,18 @@ using UnityEngine.EventSystems;
 public class Drag : MonoBehaviour, IPointerDownHandler, IBeginDragHandler, IEndDragHandler, IDragHandler
 {
     [SerializeField] private Canvas canvas; // Masukan canvasnya
-
-    public RectTransform gambarPuzzle; // Masukan gambar puzzlenya
-    public GameObject detector; // Masukan detectornya untuk menempatkan puzzle tersebut
+    [SerializeField] public RectTransform gambarPuzzle; // Masukan gambar puzzlenya
+    [SerializeField] public GameObject detector; // Masukan detectornya untuk menempatkan puzzle tersebut
     Vector2 posAwal, scaleAwal;
     bool onPos = false;
 
+    // Skrip yang dimana gambar tersebut adalah komponen rectTransform agar bisa di pindah2
     private void Awake()
     {
         gambarPuzzle = GetComponent<RectTransform>();
     }
 
+    // Skrip memulai awal
     void Start()
     {
         posAwal = transform.position;
@@ -46,14 +47,16 @@ public class Drag : MonoBehaviour, IPointerDownHandler, IBeginDragHandler, IEndD
     // Skrip ketika melepaskan mouse atau jari
     public void OnEndDrag(PointerEventData eventData)
     {
-        Debug.Log("Akhir Drag");
+        Debug.Log("Melepas Drag");
         if (onPos)
         {
+            Debug.Log("Sudah Tepat");
             transform.position = detector.transform.position;
             transform.localScale = new Vector2(1.65f, 1.65f);
         }
         else
         {
+            Debug.Log("Belum Tepat");
             transform.position = posAwal;
             transform.localScale = scaleAwal;
         }
