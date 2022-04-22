@@ -19,7 +19,7 @@ MonoBehaviour:
     width: 1366
     height: 725
   m_ShowMode: 4
-  m_Title: Project
+  m_Title: Scene
   m_RootView: {fileID: 2}
   m_MinSize: {x: 875, y: 542}
   m_MaxSize: {x: 10000, y: 10000}
@@ -120,7 +120,7 @@ MonoBehaviour:
   m_MinSize: {x: 709, y: 492}
   m_MaxSize: {x: 18004, y: 14042}
   vertical: 0
-  controlID: 575
+  controlID: 168
 --- !u!114 &6
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -145,7 +145,7 @@ MonoBehaviour:
   m_MinSize: {x: 201, y: 442}
   m_MaxSize: {x: 4001, y: 8042}
   vertical: 1
-  controlID: 658
+  controlID: 173
 --- !u!114 &7
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -222,7 +222,7 @@ MonoBehaviour:
   m_MinSize: {x: 232, y: 492}
   m_MaxSize: {x: 10002, y: 14042}
   vertical: 1
-  controlID: 581
+  controlID: 255
 --- !u!114 &10
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -428,9 +428,9 @@ MonoBehaviour:
   m_PlayAudio: 0
   m_AudioPlay: 0
   m_Position:
-    m_Target: {x: 407.51102, y: 240.2056, z: -13.237479}
+    m_Target: {x: 349.15707, y: 144.49283, z: -20.40911}
     speed: 2
-    m_Value: {x: 407.51102, y: 240.2056, z: -13.237479}
+    m_Value: {x: 346.3778, y: 148.13875, z: -19.730131}
   m_RenderMode: 0
   m_CameraMode:
     drawMode: 0
@@ -481,9 +481,9 @@ MonoBehaviour:
     speed: 2
     m_Value: {x: 0, y: 0, z: 0, w: 1}
   m_Size:
-    m_Target: 249.12227
+    m_Target: 180.11748
     speed: 2
-    m_Value: 249.12227
+    m_Value: 188.60469
   m_Ortho:
     m_Target: 1
     speed: 2
@@ -536,9 +536,9 @@ MonoBehaviour:
   m_SceneHierarchy:
     m_TreeViewState:
       scrollPos: {x: 0, y: 0}
-      m_SelectedIDs: ffffff7f
+      m_SelectedIDs: 
       m_LastClickedID: 0
-      m_ExpandedIDs: 5ef4ffff98f4ffff1ef6ffff42f6ffff52f6ffff4af8fffffef8ffff30fbffff
+      m_ExpandedIDs: 36f6ffff70f6fffff2f7ffff12f8ffff1ef8ffff42fbffff
       m_RenameOverlay:
         m_UserAcceptedRename: 0
         m_Name: 
@@ -599,22 +599,21 @@ MonoBehaviour:
     m_ShowAllHits: 0
     m_SkipHidden: 0
     m_SearchArea: 1
-    m_Folders:
-    - Packages
+    m_Folders: []
     m_Globs: []
     m_OriginalText: 
   m_ViewMode: 0
   m_StartGridSize: 16
   m_LastFolders: []
   m_LastFoldersGridSize: -1
-  m_LastProjectPath: D:\Projek\Fruit Puzzle\Game Fruit Puzzle
+  m_LastProjectPath: D:\Projek\Fruit Puzzle\Baru\FruitPuzzle
   m_LockTracker:
     m_IsLocked: 0
   m_FolderTreeState:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: ae480000
     m_LastClickedID: 18606
-    m_ExpandedIDs: ffffffff0000000082590000845900008659000088590000c0590000
+    m_ExpandedIDs: ffffffff0000000074590000765900007859000080590000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -642,7 +641,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: ffffffff00000000845900008659000088590000
+    m_ExpandedIDs: ffffffff0000000074590000765900007859000080590000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
