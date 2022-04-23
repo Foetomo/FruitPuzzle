@@ -8,8 +8,8 @@ public class Drag : MonoBehaviour, IPointerDownHandler, IBeginDragHandler, IEndD
     [SerializeField] private Canvas canvas; // Masukan canvasnya
     [SerializeField] public RectTransform gambarPuzzle; // Masukan gambar puzzlenya
     [SerializeField] public GameObject detector; // Masukan detectornya untuk menempatkan puzzle tersebut
+    [SerializeField] public bool onPos = false, onPaste = false; // Agar bisa masuk ke Script FeedBack
     Vector2 posAwal, scaleAwal;
-    bool onPos = false;
 
     // Skrip yang dimana gambar tersebut adalah komponen rectTransform agar bisa di pindah2
     private void Awake()
@@ -53,12 +53,14 @@ public class Drag : MonoBehaviour, IPointerDownHandler, IBeginDragHandler, IEndD
             Debug.Log("Sudah Tepat");
             transform.position = detector.transform.position;
             transform.localScale = new Vector2(1.65f, 1.65f);
+            onPaste = true;
         }
         else
         {
             Debug.Log("Belum Tepat");
             transform.position = posAwal;
             transform.localScale = scaleAwal;
+            onPaste = false;
         }
     }
 
