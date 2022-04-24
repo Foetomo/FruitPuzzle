@@ -1,4 +1,4 @@
-using System;
+using System.IO;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -6,6 +6,7 @@ using UnityEngine.SceneManagement;
 
 public class SceneManagement : MonoBehaviour
 {
+
     [Header("BGM Button")]
     public GameObject onPlayBGM;
     public GameObject offMuteBGM;
@@ -13,7 +14,6 @@ public class SceneManagement : MonoBehaviour
     [Header("SFX Button")]
     public GameObject onPlaySFX;
     public GameObject offMuteSFX;
-
 
     public void ButtonBGMMute()
     {
@@ -53,6 +53,11 @@ public class SceneManagement : MonoBehaviour
     public void DropSFX()
     {
         SoundManager.Instance.DropSFX();
+    }
+
+    public void RestartScene()
+    {
+        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
     }
 
     // Untuk pindah dari scene ke scene berikutnya

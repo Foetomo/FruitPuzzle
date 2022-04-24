@@ -1434,7 +1434,7 @@ RectTransform:
   m_Children:
   - {fileID: 289589250}
   m_Father: {fileID: 2080206715}
-  m_RootOrder: 4
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 1}
   m_AnchorMax: {x: 1, y: 1}
@@ -2907,7 +2907,7 @@ RectTransform:
   - {fileID: 503081112}
   - {fileID: 89828810}
   m_Father: {fileID: 2080206715}
-  m_RootOrder: 5
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -3500,12 +3500,12 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2052573162}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 2080206715}
-  m_RootOrder: 3
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 1}
   m_AnchorMax: {x: 0.5, y: 1}
@@ -3532,7 +3532,9 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Choose Level
+  m_text: 'Choose Level
+
+'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 374f13e968a14de418897d00fde83c7f, type: 2}
   m_sharedMaterial: {fileID: 1162029171552455904, guid: 374f13e968a14de418897d00fde83c7f, type: 2}
@@ -3542,7 +3544,7 @@ MonoBehaviour:
   m_fontColor32:
     serializedVersion: 2
     rgba: 4281119227
-  m_fontColor: {r: 0.9843138, g: 0.69411767, b: 0.17254902, a: 1}
+  m_fontColor: {r: 0.9843137, g: 0.69411767, b: 0.17254902, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -3703,9 +3705,9 @@ RectTransform:
   - {fileID: 2018911346}
   - {fileID: 1108628928}
   - {fileID: 65734327}
-  - {fileID: 2052573163}
   - {fileID: 461949495}
   - {fileID: 1751914532}
+  - {fileID: 2052573163}
   m_Father: {fileID: 0}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}

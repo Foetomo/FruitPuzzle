@@ -5,7 +5,7 @@ using TMPro;
 
 public class Control : MonoBehaviour
 {
-    public GameObject parentPuzzle, penutup, panelGreat, buttonDone, buttonPlay;
+    public GameObject parentPuzzle, penutup, panelGreat, buttonDone, buttonPlay, buttonRestart;
     public TextMeshProUGUI textLevel, textFruit;
     string level, fruit;
     int order = 0; // order merupakan urutan per level
@@ -54,13 +54,29 @@ public class Control : MonoBehaviour
             }
             else if (order == 3)
             {
+                level = "Level 4";
+                fruit = "Dragon Fruit";
+                textLevel.text = level;
+                textFruit.text = fruit;
+            }
+            else if (order == 4)
+            {
+                level = "Level 5";
+                fruit = "Grapes";
+                textLevel.text = level;
+                textFruit.text = fruit;
+            }
+            else if (order == 5)
+            {
                 level = "Done";
                 fruit = "Done";
                 textLevel.text = level;
                 textFruit.text = fruit;
                 penutup.gameObject.SetActive(true);
                 panelGreat.gameObject.SetActive(true);
+                buttonPlay.gameObject.SetActive(false);
                 buttonDone.gameObject.SetActive(true);
+                buttonRestart.gameObject.SetActive(true);
             }
         }
         parentPuzzle.transform.GetChild(order).gameObject.SetActive(true);
