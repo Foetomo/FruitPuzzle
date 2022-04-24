@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class FeedBack : MonoBehaviour
 {
-    public GameObject panelGreat, penutup;
+    public GameObject panelGreat, penutup, buttonPlay;
     bool selesai = false;
 
     // Script untuk mengecek ketika puzzle sudah selesai
@@ -27,6 +27,7 @@ public class FeedBack : MonoBehaviour
         {
             panelGreat.gameObject.SetActive(true);
             penutup.gameObject.SetActive(true);
+            buttonPlay.gameObject.SetActive(true);
         }
     }
 

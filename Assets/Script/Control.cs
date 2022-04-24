@@ -13,6 +13,7 @@ public class Control : MonoBehaviour
     // Script untuk
     void active(int a)
     {
+        
         order += a;
         if (order < 0)
         {
@@ -35,6 +36,7 @@ public class Control : MonoBehaviour
                 fruit = "Apple";
                 textLevel.text = level;
                 textFruit.text = fruit;
+                
             }
             else if (order == 1)
             {

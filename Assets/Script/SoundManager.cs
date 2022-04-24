@@ -1,90 +1,66 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.UI;
 
 public class SoundManager : MonoBehaviour
 {
-    [SerializeField] GameObject onPlay, OffPlay;
-    [SerializeField] AudioSource bgmSource;
+    public static SoundManager Instance { get; set; }
 
-    private bool muted = false;
+    [Header("Audio Source")]
+    public AudioSource bgm;
+    public AudioSource sfx;
+    public AudioSource drop;
 
     private void Awake()
     {
-        bgmSource = GameObject.FindGameObjectWithTag("bgm").GetComponent<AudioSource>();
-    }
+        bgm = transform.GetChild(0).GetComponent<AudioSource>();
+        sfx = transform.GetChild(1).GetComponent<AudioSource>();
 
-    void Start()
-    {
-        if (!PlayerPrefs.HasKey("muted"))
+        DontDestroyOnLoad(this);
+        if (Instance == null)
         {
-            PlayerPrefs.SetInt("muted", 0);
-            Load();
+            Instance = this;
         }
         else
         {
-            Load();
-        }
-        UpdateButtonIcon();
-        PlayStopBGM();
-    }
-
-    void PlayStopBGM() // Buat cek lagi di mute atau ngga.
-    {
-        if (muted) // Kalo iya di mute audio source bgmnya
-        {
-            bgmSource.Pause();
-        }
-        else // Kalo ngga di play audio source bgmnya
-        {
-            bgmSource.Play();
+            Destroy(gameObject);
         }
     }
 
-    public void OnButtonPress()
+    public void ButtonBGMMute()
     {
-        if (muted == false)
+        if (bgm.mute == false)
         {
-            muted = true;
+            bgm.mute = true;
         }
         else
         {
-            muted = false;
+            bgm.mute = false;
         }
-        PlayStopBGM();
-        Save();
-        UpdateButtonIcon();
     }
 
-    public void SaveBGM()
+    public void ButtonSFX()
     {
-        Save();
+        sfx.Play();
+    }
+    
+    public void DropSFX()
+    {
+        drop.Play();
     }
 
-    private void UpdateButtonIcon()
+    public void ButtonSFXMute()
     {
-        if (muted == false)
+        if (sfx.mute == false && drop.mute == false)
         {
-            onPlay.SetActive(true);
-            OffPlay.SetActive(false);
+            sfx.mute = true;
+            drop.mute = true;
         }
         else
         {
-            onPlay.SetActive(false);
-            OffPlay.SetActive(true);
+            sfx.mute = false;
+            drop.mute = false;
         }
-    }
-
-    private void Load()
-    {
-        muted = PlayerPrefs.GetInt("muted") == 1;
-    }
-
-    private void Save()
-    {
-        Debug.Log("Save Sukses");
-        PlayerPrefs.SetInt("muted", muted ? 1 : 0);
     }
 
 }

@@ -34,6 +34,7 @@ public class Drag : MonoBehaviour, IPointerDownHandler, IBeginDragHandler, IEndD
     public void OnPointerDown(PointerEventData eventData)
     {
         Debug.Log("Klik Drag");
+        SoundManager.Instance.ButtonSFX();
     }
 
     // Skrip ketika di drag atau memindahkan objek
@@ -47,6 +48,7 @@ public class Drag : MonoBehaviour, IPointerDownHandler, IBeginDragHandler, IEndD
     // Skrip ketika melepaskan mouse atau jari
     public void OnEndDrag(PointerEventData eventData)
     {
+        SoundManager.Instance.DropSFX();
         Debug.Log("Melepas Drag");
         if (onPos)
         {

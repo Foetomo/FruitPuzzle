@@ -347,6 +347,8 @@
 "Assets/Script/Control.cs"
 "Assets/Script/Drag.cs"
 "Assets/Script/FeedBack.cs"
+"Assets/Script/Listenning.cs"
+"Assets/Script/LoadSound.cs"
 "Assets/Script/SceneManagement.cs"
 "Assets/Script/SoundManager.cs"
 "Assets/Script/Swipe.cs"
